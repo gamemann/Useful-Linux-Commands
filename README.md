@@ -6,7 +6,7 @@ This command kills a process bound to a specified port (`<PORT>`). It is recomme
 
 ```bash
 PORT=<port>
-kill $(sudo lsof -t -i:<$PORT>)
+kill $(sudo lsof -t -i:$PORT)
 ```
 
 ## Current CPU Clock Speed
