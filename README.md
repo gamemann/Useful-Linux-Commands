@@ -20,6 +20,6 @@ watch -n 1 'cat /proc/cpuinfo | grep "MHz"'
 This command kills all processes that matches a process name.
 
 ```bash
-COMMAND=""
-kill -9 $(pgrep -f $COMMAND)
+NAME=""
+kill -9 $(pgrep -f $NAME)
 ```
