@@ -23,3 +23,8 @@ This command kills all processes that matches a process name.
 NAME=""
 kill -9 $(pgrep -f $NAME)
 ```
+
+## Show Latency Of Touchpad Input
+```bash
+sudo libinput debug-events | stdbuf -oL awk '/POINTER_MOTION/ {print $4}' | stdbuf -oL sed 's/+//; s/s//' | awk '{print $1 - last; last = $1}'
+```
